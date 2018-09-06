@@ -1,8 +1,8 @@
 /**
- * Prints 
+ * Prints Hello World!
  * 
  * @author Shoh Mollenkamp
- * @version 8/17/2018
+ * @version 9/6/2018
  */
 public class Hello_world {
 
