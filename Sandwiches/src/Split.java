@@ -49,7 +49,7 @@ public class Split {
 		int countBread= (ingredients.length()-ingredients.replace("bread","").length())/5;
 		int breadOne=ingredients.indexOf("bread");
 		if(countBread==0) {
-			breadOne-=4;
+			countBread+=1;
 		}
 		String bread1=ingredients.substring(breadOne +5);
 		String[] arraySand = bread1.split("bread");
@@ -68,7 +68,7 @@ public class Split {
 
 /*Write a method that take in a string like
 
-* "apples pineapples bread lettus tomato bacon mayo ham bread cheese"
+* "apples pineapples bread lettuce tomato bacon mayo ham bread cheese"
 
 * describing a sandwich
 
@@ -79,6 +79,23 @@ public class Split {
 * Again, what if it's a fancy sandwich with multiple pieces of bread?
 
 */
+		public static void splitBread(String ingredients) {
+			int countBread= (ingredients.length()-ingredients.replace("bread","").length())/5;
+			int breadOne=ingredients.indexOf("bread");
+			if(countBread==0) {
+				countBread+=1;
+			}
+			String bread1=ingredients.substring(breadOne +5);
+			String[] arraySand = bread1.split("bread");
+			if(countBread==arraySand.length) {
+				String[] arrayWich= new String[arraySand.length-1];
+				for(int i=0;i<arrayWich.length;i++ ) {
+					arrayWich[i]=arraySand[i];
+				}
+				System.out.println(Arrays.toString(arrayWich));
+			}else {
+				System.out.println(Arrays.toString(arraySand));
+			}
 
  }
 
